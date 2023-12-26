@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="list-container">
+    <div class="modal">
+      <div class="modal__background">
+        <div class="modal__content">
+          <div class="modal__header">Что-то пошло не так</div>
+          <div class="modal__body">
+            <div class="modal__body_content">К сожаление нам не удалось определить ваше местоположение, пожалуйста,
+              дайте разрешение на использование геолокации, либо введите координаты вручную.</div>
+            <form class="modal__form_group">
+              <label for="input" class="formlabel">Широта и долгота через запятую</label>
+              <input type="text" class="form__input modal__input" id="input"
+                pattern="^\[?-?\d+\.?\d*,{1}\s?-?\d+\.?\d*\]?$" required>
+              <div class="form__buttons">
+                <button class="form__btn btn__cancel">Отмена</button>
+                <button type="submit" class="form__btn btn__continue">Ok</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="list-items">
+    </ul>
+    <div class="footer">
+      <div class="input-controls">
+        <form class="form">
+          <input type="text" class="form-input">
+        </form>
+        <button class="btn-select btn-audio">
+        </button>
+        <button class="btn-select btn-video">
+        </button>
+      </div>
+      <div class="record-controls hidden">
+        <button class="btn-select record-controls__btn-start"></button>
+        <div class="record-controls__timer">
+          <span class="timer">00:00</span>
+        </div>
+        <button class="btn-select record-controls__btn-stop"></button>
+      </div>
+    </div>
+    <video class="modal-video hidden" controls></video>
+    <div class="modal-warning hidden">
+      <div class="modal-warning__text"></div>
+      <button class="modal-warning__btn-close"></button>
+    </div>
+  </div>
+
+</body>
+
+</html>
